@@ -1,8 +1,6 @@
-# Blinkit-Data-Visualization
-"Power BI dashboard analyzing Blinkit dataset with insights on sales, revenue, and customer trends."
-📊 Blinkit Data Visualization Dashboard
-🚀 Project Overview
+# 📊 Blinkit-Data-Visualization
 
+🚀 Project Overview
 This project is a Power BI Dashboard created to analyze Blinkit sales and operations data. The dashboard provides insights into product performance, customer behavior, and regional trends, helping businesses make data-driven decisions.
 
 🎯 Objective
