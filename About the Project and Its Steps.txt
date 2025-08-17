@@ -108,19 +108,98 @@ Chart Requirements :
                3) No of Items    : COUNTROWS (Data Set Name [Column Name] )
                4) Average Rating : AVERAGE   (Data Set Name [Column Name] )
 
-6 . Build Visuals : 
+6 . Build Visuals for KPI's : 
                1) Select --> Card New :  
-                        Foramt Visulas --> Layout --> Arrangement --> (Grid) --> Max Rows , Max Columns . 
+                        Format Visuals --> Layout --> Arrangement --> (Grid) --> Max Rows , Max Columns . 
                         General --> Properties --> Size ( Height and Width )
-                        Visuals --> Callout Values --> Font , Size , colors 
+                        Visuals --> Callout Values --> Font , Size , colors , decimal values and display units
                         Rename the Labels --> All Captial Letters 
                         Cards --> 
-                                 Shape to be Rounded Rectangel 
+                                 Shape to be Rounded Rectangle 
                                  Padding 
                                  background - 40%
-                                 trun on Shadow 
-                                 Border trun off
-                                 Accent bar trun on 
+                                 turn on Shadow 
+                                 Border turn off
+                                 Accent bar turn on 
+                                 Background --> Series --> Browse and Select --> Fit --> Set Transparency 
+                       
+                        Images --> 
+                                Series  --> Browse and Select --> then size and format according to you 
+
+                        Currency Symbol --> select total sales --> Measure tools open --> Select the Symbol 
+
+
+7 . Visualization Charts : 
+                  1 . Total Sales by Fat content : 
+                            a)  First Create a Placeholder :
+                                   Insert  --> Shape --> Rounded Rectangle 
+                                   General --> Properties (Height and Width) 
+                                   Shape   --> Rounded Rectangle - 3 %
+                                   Style   --> Color - white , Transparency - 10 % 
+
+                            b)  Now Create a Donut Chart as Per our Requirement  :         
+                                   Select the Donut Chart --> select Sales and item fat content .
+                                   but Additionally we have to add 3 more metrics : 
+                                             1 . Go to Modeling Tab --> New Parameter --> Field -- > Give The Parameter name and add recorder fields --> Click on Create
+                                                 --> You Can see Dax will be return and Metrics add on Canvas . 
+                                             2 . Remove the Sales From Donut Field Value and add Metrics there then Slicers (recorder fields) works .
+                                             3 . Now the Slicers will Format : 
+                                                     Format Visual --> Visual --> Slicer Setting --> Tile , Selection --> Single select .
+                                                                       Visual --> Values --> Formatting the Style of text and color .
+
+                                                                       General --> Properties (Height - 40 , width - 465)
+                                             4 . Formatting on Donut :
+                                                     Format Visual --> Visual --> Legends      --> Position --> Top Left 
+                                                                              --> Slices       --> Color Low Fat(#CDA900) , Regular(#568949) --> Spacing --> 75% 
+                                                                                              
+                                                                              --> Detail Label --> Values --> Label Content --> Data Value
+                                                                   --> General--> Properties   -->  Height :230         Width :220  
+                                                                              --> Title        --> Format According to you 
+                                             5 . Center of Donut Chart : 
+                                                     Total Sales are added there : 
+                                                          Select a new card --> Add the Metric there .
+
+
+                 2 . Total Sales by Item Type: Stacked Bar Chart 
+                                 X axis : Metrics , Y axis : Item Type 
+                                 Formatting the Name and Labels :
+
+                                 
+
+                 3 . Fat Content by Outlet for Total Sales : Clustered Bar Chart 
+                                X axis : Metrics , Y axis : Outlet Location Type , Legend : Item fat Content 
+                                Formatting the Name and Labels : 
+              
+                 4 . Total Sales by Outlet Establishment : Line Chart 
+                                
+
+                 
+                 5 . Sales by Outlet Size : Donut Chart
+ 
+                 6 . Sales by Outlet Location : Funnel
+                 
+                 7 . All Metrics by Outlet Type : Matrix Chart 
+
+
+
+Then Now add Slicer Chart for Filter :
+                                     for Outlet Location Type , Outlet Size , Item Type 
+
+Make More Interactive by filtering : data is not completely filtering its also highlighting the other data .
+                                ** To Completly Filter the data go to Format --> Edit Interaction --> then 2 options you can see above your chart 1) filter and 2)                                    Highlited 
+                                ---> Choose the Filter . 
+                                        
+
+
+
+
+
+
+                                                     
+                                                                                                 
+         
+ 
+
 
 
 
