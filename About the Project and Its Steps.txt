@@ -1,0 +1,134 @@
+Blink it Analysis ***
+
+Steps in Project :
+
+ 1) Requirement Gathering / Business Requirements 
+ 2) Data Walkthrough
+ 3) Data Connection 
+ 4) Data Cleaning / Quality Check 
+ 5) Data Modeling 
+ 6) Data Processing 
+ 7) DAX Calculation 
+ 8) Dashboard Lay outing 
+ 9) Charts Development and Formatting 
+10) Dashboard / Report Development
+11) Insights Generation 
+
+-------------------------------------------------------------------------------
+
+1) Business Requirements :
+
+ - To conduct a comprehensive analysis of blink it's Sales Performance , customer Satisfaction and Inventory distribution to identify key insights and opportunities for optimization using various KPIs and visualization in Power BI .  
+
+KPI's Requirements :
+1) Total Sales     : The overall revenue generated from all items sold .  
+2) Average Sales   : The average revenue per Sale .
+3) Number of Items : The total count of different items sold .
+4) Average Rating : The average customer rating for items sold .
+
+
+Chart Requirements :
+
+ - if you want to deep dive in the data to know how the particular part of business is performing . 
+  1) Total Sales by Fat content :
+       **objective : To analyze the impact of fat content on total Sales .
+       **Additional KPI's Metrics : Assess how other KPI's (Average Sales , Number of Items, Average Rating) vary with fat Content.
+       **Chart Type : Donut Chart .
+  2) Total Sales by Item Type:
+        **objective : Identify the Performance of different item types in term of total sales .
+        **Additional KPI's Metrics : Assess how other KPI's (Average Sales , Number of Items, Average Rating) vary with fat Content.
+        **Chart Type : Bar Chart .
+ 
+  3) Fat Content by Outlet for Total Sales :
+        **objective : Compare total sales across different outlets segmented by fat content .
+        **Additional KPI's Metrics : Assess how other KPI's (Average Sales , Number of Items, Average Rating) vary with fat Content.
+        **Chart Type : Stacked Column Chart .
+
+  4) Total Sales by Outlet Establishment :
+        **objective : Evaluate how the age or type of outlet establishment influences total sales.
+        **Chart Type: Line Chart  
+
+  5) Sales by Outlet Size :
+        **objective  : Analyze the correlation between outlet size and total sales.
+        **Chart Type : Donut/Pie Chart 
+
+  6) Sales by Outlet Location :
+        **objective  : Assess the geographic distribution of sales across different locations .
+        **Chart Type : Funnel Map
+
+  7) All Metrics by Outlet Type :
+        **objective  : Provide a Comprehensive  view of all key metrics ( Total Sales , Number of items ,Average Rating ) broken down by different outlet types.
+        **Chart Type : Matrix Card   
+
+
+2) Data Walkthrough :
+               * Number/Count of Rows and Columns 
+              * How the Data is interlinked to Each Other 
+
+3) Data Connection :
+              * Connect the Excel sheet to the power bi desktop 
+              * Load the Data into the Pane 
+
+4) Data Cleaning / Quality Check :
+              * - To see the Missing values and outliers 
+              * - Check the Blanks 
+
+      Steps :
+            1 .  Go in Home Tab and Click on Transform the Data . ( Then you can see a new Window will be open Which is Power Query Editor ) .
+                  ** Power Query Editor :  - Allow to Some Manipulations in the Data . 
+                                           - Allow to Data Cleaning in the Data . 
+                                           ** All the Steps of Cleaning will be recorded in the Applied Steps - its Useful for new user who visits your Power Query Editor .
+
+            2.  Cleaning : 
+                       - Replace Value : Lf = Low fat , Reg = Regular , Low fat = Low Fat  . ( Then you have to Go in Power Bi , Then Click on Close and Apply . )
+
+            3.  Check Quality of the Data: 
+                       - Go to View and there a Option Called Column Quality ( Then you can see Valid , Error and Empty  Data Percentage , Then You Can Work on the Particular Column and 
+                         Click on Close and Apply ) . 
+
+     ** Then Go To Power BI Report view .
+
+1 . Set up the canvas Size - Click on ( Format Page --> Canvas Setting --> Type [ Custom ]  ( H - 800px | W - 1400px ) . 
+2 . Set up the Background Color and Transparency set at ( 40 % ) 
+3 . To Give the Shapes and Names :
+                * Click on Insert --> Shapes --> Select the Shape and apply the custom adjustment by your Choice like 
+                                      Rotation   --> 90 degree
+                                      Style      --> colors :#FFD200(Yellow) , Shadow
+                                      Properties --> Height : 750   Width : 200
+4 . Name of the Dashboard : Insert --> Add a Text Box 
+                            Move on the Shape and from Effects --> Background turn off 
+                                      
+
+5 . Calculate the all KPI's  :We Have Write Some DAX Calculations 
+               1) Total Sales    : Which is Total Revenue of Entire Data We Have . 
+                                   Right Click in Front of Sales -->  Click on New Measure --> Give Name as Total Sales = Function --> "" 
+
+                                   SUM       (Data Set Name [Column Name] )
+               2) Average Sales  : AVERAGE   (Data Set Name [Column Name] )
+               3) No of Items    : COUNTROWS (Data Set Name [Column Name] )
+               4) Average Rating : AVERAGE   (Data Set Name [Column Name] )
+
+6 . Build Visuals : 
+               1) Select --> Card New :  
+                        Foramt Visulas --> Layout --> Arrangement --> (Grid) --> Max Rows , Max Columns . 
+                        General --> Properties --> Size ( Height and Width )
+                        Visuals --> Callout Values --> Font , Size , colors 
+                        Rename the Labels --> All Captial Letters 
+                        Cards --> 
+                                 Shape to be Rounded Rectangel 
+                                 Padding 
+                                 background - 40%
+                                 trun on Shadow 
+                                 Border trun off
+                                 Accent bar trun on 
+
+
+
+
+
+
+
+
+
+
+
